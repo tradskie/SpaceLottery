@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>The Space Field Lottery</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+      <!-- Facebook Meta Tags -->
+      <meta property="og:url" content="https://spaceminer.spaceprojects.online/" />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="Space Lottery" />
+      <meta property="og:description"content="Space Field Lottery is a mini game made by the Space Eco System Team" />
+      <meta property="og:image" content="https://spaceminer.spaceprojects.online/assets/img/logo.png" />
+  
+      <!-- Twitter Meta Tags -->
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta property="twitter:domain" content="" />
+      <meta property="twitter:url" content="https://spaceminer.spaceprojects.online/" />
+      <meta name="twitter:title" content="Space Lottery" />
+      <meta name="twitter:description" content="Space Lottery is a mini game made by the space team" />
+      <meta name="twitter:image" content="https://spaceminer.spaceprojects.online/assets/img/logo.png" />
+
+  <!-- Favicons -->
+  <link href="assets/img/logo.png" rel="icon" type="image/png">
+  <link href="assets/img/logo.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P">
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/styleNew.css" rel="stylesheet">
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/web3/3.0.0-rc.5/web3.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+
+<style>
+  /* Style The Dropdown Button */
+  .dropbtn {
+    background-color: transparent;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    position: relative;
+    left: 10px;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #00000033;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: rgb(255, 255, 255);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #212429}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {
+    background-color: transparent;
+    color: #ffc451;
+  }
+  </style>
+
+<body>
+
+  <!-- Video -->
+  <video autoplay muted loop id="myVideo">
+    <source src="./assets/Space.mp4" type="video/mp4">
+  </video>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center justify-content-lg-between">
+     <h1 class="logo me-auto me-lg-0"><a href="index.html"><img style="height: 100%; width: 40px; padding-right: 5px;" src="assets/img/lottery.svg" alt="">The <span class="bnb">Space Field</span> Lottery</a></h1>
+     <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+       <!--   <li>
+            <a class="nav-link scrollto" href="https://spacemoneydapp.gitbook.io/space-dao/implements/space-miner">FAQ</a>
+          </li>
+	        <li>
+            <a class="nav-link" href="https://dao.spaceprojects.online/dashboard" target="_blank"><img style="height: 100%; width: 40px;" class="nav-logo" id="logo" alt="" src="assets/img/logo.png"></img>Space Dao</a>
+          </li>
+	-->
+	  <li>
+            <a class="nav-link" href="https://poocoin.app/tokens/0x3b56a620d8a4f68049964cffe674da9174193bc2" target="_blank"><img style="height: 100%; width: 40px;"class="nav-logo" id="logo" alt="" src="assets/img/poocoin.svg"></img>Buy $SPO</a>
+          </li>
+          <div class="dropdown">
+            <button class="dropbtn"><img class="nav-logo" id="logo" alt="" src="assets/img/OreToken1.png">Projects</button>
+            <div class="dropdown-content">
+              <a href="https://spacefield.spaceprojects.online/?ref=0x083afc30588384ed9de4cd23c5035a34f0f7a6e1"><img class="nav-logo" id="logo" alt="" src="assets/img/OreToken1.png">Space Field</a>
+              <a href="https://spaceport.spaceprojects.online/?ref=0x2f0ead34aBDD8375382AD56B8da4b14d94AD9B66"><img class="nav-logo" id="logo" alt="" src="assets/img/OreToken1.png">Space Port</a>
+              <a href="https://spaceminer.spaceprojects.online?ref=0x7ec5c8753ed76a517a5c48de14f489f334b33ed2"><img class="nav-logo" id="logo" alt="" src="assets/img/Space-logo-Orange.svg">Space Miner</a>
+              <a href="https://dao.spaceprojects.online/dashboard"><img class="nav-logo" id="logo" alt="" src="assets/img/Space-logo-Orange.svg">Space Dao</a>
+            </div>
+          </div>
+          <li>
+            <a class="nav-link" href="https://bscscan.com/address/0x300199486585efbb2b0edf050ed4bc8537525ecc#code" target="_blank"><img class="nav-logo" id="logo" alt="" src="assets/img/bscscan-logo-light-circle.svg"></img>Verified Contract</a>
+          </li>
+	         <li>
+            <a class="nav-link" href="https://twitter.com/SpaceEcoSystem" target="_blank"><img class="nav-logo" id="twitter" alt="" src="assets/img/twitter.svg"></img>Twitter</a>
+          </li> 
+           <li>
+            <a class="nav-link" href="https://t.me/SpaceEcosystem" target="_blank"><img class="nav-logo" id="telegram" alt="" src="assets/img/telegram.svg"></img>Telegram</a>
+          </li> 
+        </ul>
+        <div style="float:right">
+          <a class="nav-link" >
+            <button id="enableMetamask" class="btn connect-btn">Connect </span></button>
+          </a>
+        </div>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <br><br><br><br><br>
+  <section id="hero" class="d-flex align-items-center justify-content-center">
+    <div class=container>
+      <!-- <div class="row" style="margin: 0 auto;">
+        <div class="big-timer" id="start-container">
+          Starts in <strong id="start-timer">00:00:00</strong>
+        </div>
+      </div> -->
+      <div class="welcome-box" data-aos="zoom-in">
+        <div class="row info-container" style="padding: 0px;" data-aos="zoom-in">
+          <div class=" info-container-2 d-flex flex-wrap justify-content-center " >
+  <!--    <div class="col-md-2 d-flex align-items-center justify-content-sm-center">
+            <img class="d-flex justify-content-md-start "id="logo-space" src="./assets/img/logo.png"  alt="" width="175" height="175">   
+            </div> -->
+            <div class="col-md-8 col-sm-12 d-flex align-items-center justify-content-center" >
+              <div>
+                <div class="d-flex flex-column ">
+                  <h1 class="text-center text-black">Welcome to</h1>
+                  <span class="busd text-center " style="-webkit-text-stroke: 1px #f4c444; color:black; letter-spacing: 2px; margin-left: 5px;font-size: 1.95rem;">SPACE FIELD LOTTERY!</span>
+                  <h2 class="text-center" style="max-width: 1000px;">Try your luck and grow your<span class="busd"  style="color: #f4c444; font-weight: 300;">SPO</span>.
+                  </h2>
+                  <hr>
+                   <div class="row stats-row-container justify-content-center">
+                    <div class="stat">
+                     <div class="header">
+                      <i class="bi-bank" style=" font-size: 16px;";></i>
+                     <span>Total Lottery Entries</span>
+                   </div>
+                   <strong id="contract-lottery-entries" class="number">0</strong>
+                  <div>
+                    <strong class="busd">SPACE ORE</strong>
+                  </div>
+                  <!-- <div class="usd">
+                    ≈ $<span id="initial-deposit-usd" >0 </span> USD
+                  </div> -->
+                </div>
+                 <div class="col-lg-2 stat">
+                  <div class="header">
+                    <i class="bi-dice-6"></i>
+                    Lottery Rewards
+                  </div>
+                   <div>
+                    <strong id="contract-lottery-rewards" class="number">0</strong>
+                  </div>
+                   <div>
+                    <strong class="busd">SPACE ORE</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+            
+            <!-- End Hero -->
+            <main id="main" style="padding-left: 35px;">
+           <section id="mine" class="d-flex">
+         <div class="container main" data-aos="fade-up">
+         <div class="row justify-content-center">
+          <div class="col-xl-12 col-md-12 disclaimer">
+            <i class="ri-alert-line"></i>
+            <span>
+              <strong>Note:</strong> Gambling is addictive, be responsible on putting your SPO tokens and goodluck!
+            </span>
+          </div>
+        </div>
+        <div class="content-box ">
+		
+          <!-- Lottery -->
+          <div class="deposit-container">
+            <div class="container main" data-aos="fade-up">
+                <h3 class="busd">
+                  Lottery
+                </h3>
+                <div class="info-container">
+                  <div style="padding-left: unset; padding-bottom: 20px">
+                    <h5>
+                      <i class="bi-dice-5" style="padding-right: 5px;"></i>
+                      <span id="lottery-round">Round 0</span>
+                      <span style="padding-left: 5px;""><i class="bi-arrow-right"></i>
+                      <span style="padding-left: 5px;">
+                        <i class="bi-cash-coin"></i>
+                        <span id="lottery-pot">0</span><strong class="busd">SPACE ORE</strong>
+                        <div style="font-size: 12px; display: inline-flex;">
+                        <div>
+                      </span>
+                    </h5>
+                   <button class="btn invest-btn" id="choose-winner-btn" hidden="true" onclick="chooseWinner()">Reveal Winner</button>
+                  </div>
+                  <div class="row" style="padding-bottom: 10px;">
+                    <div class="col-lg-6" style="line-height: 1.6;">
+                      <div style="padding-bottom: 5px; font-size: 16px;">
+                        <i class="bi-clock"></i>
+                        Lottery Start: <span id="lottery-start">0</span>
+                      </div>
+                      <div style="padding-bottom: 5px; font-size: 16px;">
+                        <i class="bi-clock"></i>
+                        Lottery End: <span id="lottery-end">0</span>
+                      </div>
+                      <div style="padding-bottom: 5px; font-size: 16px;">
+                        <i class="bi-clock"></i>
+                        Closes in: <span id="lottery-timer">--</span>
+                      </div>
+                      <div style="padding-bottom: 5px; font-size: 16px;">
+                        <i class="bi-people"></i>
+                        Player This Round: <span id="round-participants">0</span> of <span id="max-participants">0</span> occupied
+                      </div>
+                    </div>
+                    <div class="col-lg-6" style="line-height: 1.3;">
+                      <div style="padding-bottom: 5px; font-size: 16px;">
+                        <i class="ri-ticket-2-line"></i>
+                        Ticket Price:
+                        <span id="ticket-price">0 </span><strong class="busd">SPACE ORE</strong>
+                      </div>
+                      <div style="padding-bottom: 5px; font-size: 16px;">
+                        <i class="ri-ticket-2-line"></i>
+                        Your Tickets: <span id="your-tickets">0</span>
+                      </div>
+                      <div style="padding-bottom: 5px; font-size: 16px;">
+                        <i class="ri-ticket-2-line"></i>
+                        Your Chance of Winning: <span id="lotto-chance">0%</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row" style="padding-bottom: 10px;">
+                    <div class="col-lg-12">
+                      <div style="padding-top: 5px; font-size: 16px;">
+                        <i class="bi-trophy"></i>
+                        Previous Winner: <span id="previous-winner">--</span>
+                      </div>
+                      <div style="padding-top: 5px; font-size: 16px;">
+                        <i class="bi-cash-coin"></i>
+                        Previous Pot:
+                        <span id="previous-pot-busd">0 </span><strong class="busd">SPACE ORE</strong>
+                      </div>
+                      <div >
+                     <!--    <div class="row"> -->
+         
+                          <div class="col-lg-4">
+                            <div class="wallet">
+                              <i class="bi-wallet2"></i>
+                              <strong>Wallet</strong>
+                              <div>
+                                <span id="user-balance">0</span><span class="busd" style="color: white";>SPACE ORE</span>
+                              </div>
+                            </div>
+                          </div>
+                       <!--  </div> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--end Lottery-->
+
+            <!-- Buttons -->
+          <div class="row">
+            <div class="col-xl-6 first-box" style="margin-top: 5px;">
+                <div class="row example">
+                  <div class="col-lg-8">
+                    <div style="line-height: 1.4; font-size: 14px;">
+                    </div>
+                  </div>
+                </div>
+                  <div class="approve-container">
+                    <div style="padding-left: 5px; font-weight: 700;">
+                      <span style="font-size: 16px;">1.</span><!-- <i class="bi-bank"></i> -->
+                      <strong>Approve</strong><span class="busd"> SPACE ORE </span>
+                        <span class="usd">
+                          <span class="steps-help-text">(<span id="user-approved-spend">0</span> SPACE ORE approved)</span>
+                        </span>
+                        <input class="form-control" id="approve-spend" name="approved-spend" step="1" type="number" value="10">
+                        <button class="btn invest-btn" id="" onclick="approveMiner()" role="button">
+                          Approve Lottery
+                        </button>
+                    </div>
+                    <div >
+                    </div>
+                  </div>
+				  
+                  <div class="approve-container">
+                    <div style="padding-left: 5px; font-weight: 700;">
+                      <span style="font-size: 16px;">2.</span><!-- <i class="bi-bank"></i> -->
+                      <strong>Deposit</strong><span class="busd"> SPACE ORE </span>
+                      <span class="usd">
+                        <span class="steps-help-text">(You can deposit <span id="allowed-deposit">0 </span> more SPACE ORE for this round)</span>
+                      </span> 
+                      <input class="form-control" id="busd-spend" name="buy-miners" onChange="updateBuyPrice()" step="100" type="number" value="10">
+                      <button class="btn invest-btn" id="buy-eggs-btn" onclick="buyTickets()" role="button" disabled>
+                        Deposit
+                      </button>
+                    </div>
+                    <div >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Buttons -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Space Lottery</span></strong>. All Rights Reserved
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script type="text/javascript" src="assets/js/main_eth.js"></script>
+</body>
+
+
+</html>
